@@ -1,0 +1,23 @@
+---
+title: "baseballr Data Access"
+author: "Trevor Hunt"
+date: today
+format: html
+---
+
+# Introduction
+
+This notebook will serve as an exploration for the `baseballr` package in R.
+
+```{r}
+library(baseballr)
+library(dplyr)
+```
+
+To start, I'm going to download the Chadwick Bureau's public register of baseball players and save that as an RDS for reuse:
+
+```{r}
+player_lu <- chadwick_player_lu()
+
+saveRDS(player_lu, "data/raw/chadwick_player_lu.rds")
+```
